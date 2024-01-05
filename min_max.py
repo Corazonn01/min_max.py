@@ -9,7 +9,13 @@ def bubble_sort(array):
 
 
 arr = []
-n = int(input("Напишите несколько цифр: "))
+while True:
+    try:
+        n = int(input("Напишите несколько цифр: "))
+        break
+    except NameError and ValueError:
+        print("Пожалуйста введите число")
+
 for i in range(0, n):
     element = int(input("arr[" + str(i + 1) + "] = "))
     arr.append(element)
