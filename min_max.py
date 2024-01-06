@@ -12,7 +12,8 @@ arr = []
 while True:
     try:
         n = int(input("Напишите несколько цифр: "))
-        break
+        if n > 0:
+            break
     except NameError and ValueError:
         print("Пожалуйста введите число")
 
