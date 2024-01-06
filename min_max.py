@@ -16,11 +16,16 @@ while True:
             break
     except NameError and ValueError:
         print("Пожалуйста введите число")
+for i in range(n):
+    while True:
+        try:
+            element = int(input(f"arr[{i + 1}] = "))
+            break
+        except ValueError:
+            print("Пожалуйста, введите корректное число.")
 
-for i in range(0, n):
-    element = int(input("arr[" + str(i + 1) + "] = "))
     arr.append(element)
-bubble_sort(arr)
+
 print("Отсортированный массив: ")
 average = sum(arr) / len(arr)
 print(arr)
